@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding:  0;
+}
+
+.goal {
+height: 100vh;
+display: flex;
+justify-content: right;
+align-items: center;
+flex-direction: row;
+background: linear-gradient(#0000ff, #4949db,#9696de , #8c8ce9);
+}
+
+.kick {
+    background: #00ff00;
+    height: 100px;
+    width: 100px;
+    border-radius: 75%;
+    margin:  15px;
+    transition:  1s ease;
+
+}

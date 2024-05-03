@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta ref="stylesheet" href="async.css">
+    <meta charset="utf-8">
+    <title> async </title>
+<head>
+<script>
+        const ENDPOINT = 'http://api.open-notify.org/astros.json';
+ async function populateTable() {
+  const BUTTON = document.getElementById(' put in english in here');
+  const TABLE_BODY = document.getElementById (' more english in here')
+
+  try {
+            const response = await fetch (ENDPOINT);
+            const data =await response.json();
+            console.log('succesfuuuuuuuuuulu', data);
+                    
+            data.people.forEach(astronaut => {
+                let rows = document.createElement('tr');
+                let name = document.createElement('td');
+                let craft =document.createAttribute('td');
+
+                name.textContent = astronaut.name;
+                craft.textContent = astronaut.craft;
+                
+
+                row.append(name);
+                row.append(craft);
+                TABLE_BODY.append(row);
+            });
+
+      BUTTON.remove();
+        })
+        .catch(error => {
+            console.error('errrrrror', error);    
+        });
+
+</script>
+</head>
+
+<body>
+    <button type="button" onclick="populateTable()" id="populate">  fectch me peolple</button>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">davey</th>
+                <th scope="col"> craft</th>
+        </tr>
+            </thead>
+            <tbody id= "astronauts">  the heading</tbody>
+    </table>
+    <script src="assign.js"></script>
+</body>
+</html>
